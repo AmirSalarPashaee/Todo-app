@@ -1,25 +1,78 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import TodoEntry from "./component/TodoEntry";
+import TodoItems from "./component/TodoItems";
+import TodoFooter from "./component/TodoFooter";
+import TodoStore from "./stores/TodoStore";
 
 class App extends Component {
+  state = {
+    cases: "All",
+    count: 0,
+    button:false
+  };
+
+  stateOf = states => {
+    switch (states) {
+      case "Completed":
+        this.setState({
+          cases: "Completed"
+        });
+        break;
+
+      case "Active":
+        this.setState({
+          cases: "Active"
+        });
+        break;
+
+      case "All":
+        this.setState({
+          cases: "All"
+        });
+        break;
+    }
+  };
+
+  clearer = clear => {
+    this.setState({ clear: clear });
+  };
+  default = () => {
+    if (this.state.clear === true) this.setState({ clear: false });
+  };
+
+  counter = count => {
+    if (this.state.count !== count) this.setState({ count: count });
+  };
+  clearButton = t =>{
+    this.setState({button:t})
+  };
+
   render() {
+    var log;
+    console.log(this.state.count)
+    if (typeof TodoStore.todos[0] !== "undefined" || this.state.count !== 0) {
+      log = (
+        <TodoFooter
+          stateOf={this.stateOf}
+          clearer={this.clearer}
+          count={this.state.count}
+          button={this.state.button}
+
+        />
+      );
+    }
+     
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="todoapp" className="todoapp">
+        <TodoEntry />
+        <TodoItems
+          cases={this.state.cases}
+          clear={this.state.clear}
+          counter={this.counter}
+          clearButton={this.clearButton}
+        />
+        {log}
+        {this.default()}
       </div>
     );
   }
