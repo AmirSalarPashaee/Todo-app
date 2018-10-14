@@ -3,9 +3,8 @@ Hi, this is my Second project in React. If you find any tips, please share them 
 ![Alt text](/demo.png?raw=true "Demo")
 
 Instalation   <br />
-`
-git clone https://github.com/amirsalarpashaee/todo-app/   <br />
-cd todo-app   <br />
-npm install   <br />
-npm start   <br />
-`
+
+`git clone https://github.com/amirsalarpashaee/todo-app/ `  <br />
+`cd todo-app`   <br />
+`npm install `  <br />
+`npm start `  <br />
