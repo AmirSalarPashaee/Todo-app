@@ -1,4 +1,4 @@
-import { observabel, action, extendObservable } from "mobx";
+import {  action, extendObservable } from "mobx";
 
 export default class TodoModel {
   constructor(store, title, completed, id) {

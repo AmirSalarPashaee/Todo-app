@@ -3,6 +3,7 @@ import TodoEntry from "./component/TodoEntry";
 import TodoItems from "./component/TodoItems";
 import TodoFooter from "./component/TodoFooter";
 import TodoStore from "./stores/TodoStore";
+import './index.css'
 
 class App extends Component {
   state = {
@@ -49,7 +50,7 @@ class App extends Component {
 
   render() {
     var log;
-    console.log(this.state.count)
+    //console.log(this.state.count)
     if (typeof TodoStore.todos[0] !== "undefined" || this.state.count !== 0) {
       log = (
         <TodoFooter

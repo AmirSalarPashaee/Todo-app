@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {observer} from 'mobx-react'
-import TodoStore from '../stores/TodoStore'
-import Filters from './Filters'
+import './index.css'
 class TodoFooter extends Component {
     
     clear=()=>{

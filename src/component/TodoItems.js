@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TodoItem from "./TodoItem";
 import TodoStore from "../stores/TodoStore";
 import { observer } from "mobx-react";
+import './index.css'
 class TodoItems extends Component {
   render() {
     return (

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { observer } from "mobx-react";
 import Filters from "./Filters";
-import App from "../App";
+import './index.css'
 class TodoItem extends Component {
   state = { count: 0 };
   
   onToggle = () => {
     this.props.todo.toggle();
+    //if(this.state.count > 1)
     this.setState({ count: this.state.count - 1 });
     
   };
@@ -16,7 +17,7 @@ class TodoItem extends Component {
   };
   clear = () => {
     if (this.props.aaa === true) this.props.todo.clear();
-    this.props.counter(0);
+    //this.props.counter(0);
   };
   counter = count => {
     if (this.state.count !== count) this.setState({ count: count });

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TodoStore from '../stores/TodoStore'
-
+import './index.css'
 
 class TodoEntry extends Component {
   state={

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { observer } from "mobx-react";
 import TodoStore from "../stores/TodoStore";
+import './index.css'
+
 class Filters extends Component {
   render() {
     var v = 0;
