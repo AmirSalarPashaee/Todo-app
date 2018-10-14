@@ -2,10 +2,10 @@ Hi, this is my Second project in React. If you find any tips, please share them 
 
 ![Alt text](/demo.png?raw=true "Demo")
 
-Instalation
+Instalation   <br />
 `
-git clone https://github.com/amirsalarpashaee/todo-app/
-cd todo-app
-npm install
-npm start
+git clone https://github.com/amirsalarpashaee/todo-app/   <br />
+cd todo-app   <br />
+npm install   <br />
+npm start   <br />
 `
