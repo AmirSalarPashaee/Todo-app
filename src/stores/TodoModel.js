@@ -30,7 +30,21 @@ export default class TodoModel {
     return count;
   });
   clear = action(() => {
-    if (this.completed === true) this.store.todos.splice(this.id , 1);
-    //console.log(this.id)
+
+    switch(this.completed){
+
+      case true :
+      this.store.todos.splice(this.id , 1);
+      break
+      case false :
+      break
+      default:
+      this.store.todos.store.pop()
+      console.log('salaaaaam')
+      break
+    }
+
+    //if (this.completed === true) this.store.todos.splice(this.id , 1);
+    //console.log(this.completed)
   });
 }

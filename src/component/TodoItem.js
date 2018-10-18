@@ -17,6 +17,7 @@ class TodoItem extends Component {
   };
   clear = () => {
     if (this.props.aaa === true) this.props.todo.clear();
+    //console.log(this.props.todo.)}
     //this.props.counter(0);
   };
   counter = count => {

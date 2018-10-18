@@ -18,9 +18,9 @@ class TodoFooter extends Component {
     <li className="todo-count strong">{this.props.count} list Item </li>   
     <div className="filters">
     <li >
-    <a onClick={()=>{ this.props.stateOf('All')} }  >All</a>
-    <a onClick={()=>{ this.props.stateOf('Active')}  } >Active</a> 
-    <a onClick={()=>{ this.props.stateOf('Completed')}  }>completed</a>         
+    <a href="#" onClick={()=>{ this.props.stateOf('All')} } >All</a>
+    <a href="#" onClick={()=>{ this.props.stateOf('Active')}  } >Active</a> 
+    <a href="#" onClick={()=>{ this.props.stateOf('Completed')}  }>completed</a>         
       </li>   
     </div>
    {b}
